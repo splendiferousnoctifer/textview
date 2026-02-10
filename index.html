@@ -4,6 +4,10 @@
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_insert" />
 <title>Textarea</title>
 <style>
   * {
@@ -33,6 +37,7 @@
 
   body {
     color: var(--text);
+    font-family: "Poppins", sans-serif;
   }
 
   a {
@@ -47,7 +52,7 @@
     padding: 18px max(18px, calc(50vw - 400px));
     width: 100%;
     min-height: 100dvh;
-    font: 18px / 1.5 system-ui;
+    font: 18px / 1.5 "Poppins", sans-serif;
     tab-size: 4;
     white-space: pre-wrap;
     text-wrap-style: stable;
@@ -209,7 +214,7 @@
     outline: none;
     border: none;
     touch-action: manipulation;
-    font: 16px / 1.5 system-ui;
+    font: 16px / 1.5 "Poppins", sans-serif;
     color: var(--text);
   }
 
@@ -250,7 +255,7 @@
     background: #5ad227;
     color: #fff;
     border-radius: 30px;
-    font: 18px / 1 system-ui;
+    font: 18px / 1 "Poppins", sans-serif;
     font-weight: 600;
     z-index: 2;
     padding: 10px 20px;
@@ -273,7 +278,7 @@
     width: 100%;
     min-height: 100dvh;
     padding: 18px max(18px, calc(50vw - 400px));
-    font: 18px / 1.5 system-ui;
+    font: 18px / 1.5 "Poppins", sans-serif;
     tab-size: 4;
     white-space: pre-wrap;
     overflow-wrap: break-word;
@@ -292,11 +297,103 @@
     display: block;
   }
 
+  #breadcrumb {
+    padding: 8px max(18px, calc(50vw - 400px));
+    font: 14px / 1.4 "Poppins", sans-serif;
+  }
+
+  #breadcrumb a {
+    color: var(--link);
+    text-decoration: none;
+    text-underline-offset: 4px;
+  }
+
+  #breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  #breadcrumb .sep {
+    color: var(--text);
+    opacity: 0.5;
+    margin: 0 4px;
+    pointer-events: none;
+  }
+
+  #breadcrumb.hidden {
+    display: none;
+  }
+
+  #referenced-by {
+    padding: 12px max(18px, calc(50vw - 400px));
+    font: 14px / 1.4 "Poppins", sans-serif;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    margin-top: 24px;
+  }
+
+  #referenced-by.hidden {
+    display: none;
+  }
+
+  #referenced-by a {
+    color: var(--link);
+    text-decoration: none;
+  }
+
+  #referenced-by a:hover {
+    text-decoration: underline;
+  }
+
+  #referenced-by .label {
+    opacity: 0.7;
+    margin-bottom: 6px;
+  }
+
+  body.view-raw #referenced-by {
+    border-top: none;
+  }
+
+  .ref-indicator {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: super;
+    font-size: 0.72em;
+    opacity: 0.6;
+    margin-left: 1px;
+    line-height: 1;
+  }
+
+  .ref-indicator .material-symbols-outlined {
+    font-size: 1em;
+    transform: rotate(90deg);
+    transform-origin: center;
+  }
+
   #button.hidden {
     display: none;
   }
+
+  .poppins-thin { font-family: "Poppins", sans-serif; font-weight: 100; font-style: normal; }
+  .poppins-extralight { font-family: "Poppins", sans-serif; font-weight: 200; font-style: normal; }
+  .poppins-light { font-family: "Poppins", sans-serif; font-weight: 300; font-style: normal; }
+  .poppins-regular { font-family: "Poppins", sans-serif; font-weight: 400; font-style: normal; }
+  .poppins-medium { font-family: "Poppins", sans-serif; font-weight: 500; font-style: normal; }
+  .poppins-semibold { font-family: "Poppins", sans-serif; font-weight: 600; font-style: normal; }
+  .poppins-bold { font-family: "Poppins", sans-serif; font-weight: 700; font-style: normal; }
+  .poppins-extrabold { font-family: "Poppins", sans-serif; font-weight: 800; font-style: normal; }
+  .poppins-black { font-family: "Poppins", sans-serif; font-weight: 900; font-style: normal; }
+  .poppins-thin-italic { font-family: "Poppins", sans-serif; font-weight: 100; font-style: italic; }
+  .poppins-extralight-italic { font-family: "Poppins", sans-serif; font-weight: 200; font-style: italic; }
+  .poppins-light-italic { font-family: "Poppins", sans-serif; font-weight: 300; font-style: italic; }
+  .poppins-regular-italic { font-family: "Poppins", sans-serif; font-weight: 400; font-style: italic; }
+  .poppins-medium-italic { font-family: "Poppins", sans-serif; font-weight: 500; font-style: italic; }
+  .poppins-semibold-italic { font-family: "Poppins", sans-serif; font-weight: 600; font-style: italic; }
+  .poppins-bold-italic { font-family: "Poppins", sans-serif; font-weight: 700; font-style: italic; }
+  .poppins-extrabold-italic { font-family: "Poppins", sans-serif; font-weight: 800; font-style: italic; }
+  .poppins-black-italic { font-family: "Poppins", sans-serif; font-weight: 900; font-style: italic; }
 </style>
+<div id="breadcrumb" class="noprint"></div>
 <article contenteditable="false" spellcheck="false"></article>
+<div id="referenced-by" class="noprint hidden"></div>
 <textarea id="raw-view" spellcheck="true" placeholder="Markdown…"></textarea>
 <button id="button" class="noprint hidden" aria-hidden="true">
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -338,6 +435,12 @@
     </svg>
     Save as TEXT
   </a>
+  <a class="item" id="all-pages" href="#" role="menuitem">
+    <svg aria-hidden="true" focusable="false" width="22" height="22">
+      <use xlink:href="#icon-empty"></use>
+    </svg>
+    All pages
+  </a>
   <a class="item" href="https://github.com/antonmedv/textarea" target="_blank" role="menuitem">
     <svg aria-hidden="true" focusable="false" width="22" height="22">
       <use xlink:href="#icon-github"></use>
@@ -346,6 +449,14 @@
   </a>
 </div>
 <div id="notification" class="noprint"></div>
+<div id="pages-modal" class="noprint" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:10;align-items:center;justify-content:center;flex-direction:column;">
+  <div style="background:var(--elevated);border-radius:12px;padding:24px;max-width:400px;width:90%;max-height:70vh;overflow:auto;">
+    <h3 style="margin:0 0 16px;">All pages</h3>
+    <div id="pages-list"></div>
+    <button id="pages-modal-close" style="margin-top:16px;padding:8px 16px;">Close</button>
+  </div>
+</div>
+<script src="config.js"></script>
 <script>
   initUI()
 
@@ -357,9 +468,33 @@
   article.addEventListener('input', debounce(500, save))
   article.addEventListener('blur', save)
   article.addEventListener('click', event => {
-    if (event.target.tagName === 'A') window.open(event.target.getAttribute('href'), '_blank')
+    const a = event.target.closest('a')
+    if (!a) return
+    if (a.classList.contains('wiki-link')) {
+      event.preventDefault()
+      const href = a.getAttribute('href') || ''
+      let slug = a.getAttribute('data-wiki-slug')
+      if (!slug && href.startsWith('#/')) {
+        try {
+          slug = decodeURIComponent(href.slice(2))
+        } catch (_) {
+          slug = href.slice(2)
+        }
+      }
+      if (!slug) return
+      if (!SUPABASE && currentPageSlug !== slug) {
+        const idx = navigationPath.indexOf(slug)
+        if (idx >= 0) navigationPath = navigationPath.slice(0, idx + 1)
+        else navigationPath = [...navigationPath, slug]
+      }
+      location.hash = '#/' + encodeURIComponent(slug)
+    } else {
+      window.open(a.getAttribute('href'), '_blank')
+    }
   })
   rawView.addEventListener('input', debounce(500, save))
+  rawView.addEventListener('keydown', handleRawKeydown)
+  rawView.addEventListener('input', handleRawInputForWikilink)
   rawView.addEventListener('blur', save)
 
   addEventListener('DOMContentLoaded', load)
@@ -382,11 +517,114 @@
 
   console.log('%cGitHub https://github.com/antonmedv/textarea', 'font-size: 16px; border: 1px solid lightblue; border-radius: 12px; padding: 10px 14px; ')
 
+  function notify(message) {
+    const n = document.querySelector('#notification')
+    if (n) {
+      n.classList.add('visible')
+      n.textContent = message
+      setTimeout(() => n.classList.remove('visible'), 2000)
+    }
+  }
+
+  const pagesCache = new Map()
+  let currentPageSlug = 'Home'
+  let navigationPath = ['Home']
+
+  const SUPABASE = (() => {
+    const cfg = window.SUPABASE_CONFIG
+    if (!cfg?.url || !cfg?.anonKey) return null
+    const base = `${cfg.url}/rest/v1/pages`
+    const headers = {
+      'apikey': cfg.anonKey,
+      'Authorization': `Bearer ${cfg.anonKey}`,
+      'Content-Type': 'application/json',
+      'Prefer': 'return=representation'
+    }
+    return {
+      async get(slug) {
+        const res = await fetch(`${base}?slug=eq.${encodeURIComponent(slug)}&limit=1`, { headers })
+        if (!res.ok) throw new Error(res.statusText)
+        const rows = await res.json()
+        const row = rows[0] ?? null
+        if (row) pagesCache.set(row.slug, row)
+        return row
+      },
+      async upsert(slug, title, content, parent_slug) {
+        const body = { slug, title, content, updated_at: new Date().toISOString() }
+        if (parent_slug !== undefined) body.parent_slug = parent_slug || null
+        const res = await fetch(`${base}?on_conflict=slug`, {
+          method: 'POST',
+          headers: { ...headers, 'Prefer': 'resolution=merge-duplicates,return=representation' },
+          body: JSON.stringify(body)
+        })
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}))
+          throw new Error(err.message || res.statusText)
+        }
+        const rows = await res.json()
+        const row = rows[0] ?? null
+        if (row) pagesCache.set(row.slug, row)
+        return row
+      },
+      async list() {
+        const res = await fetch(`${base}?select=slug,title,parent_slug,updated_at&order=updated_at.desc`, { headers })
+        if (!res.ok) throw new Error(res.statusText)
+        const rows = await res.json()
+        rows.forEach(r => pagesCache.set(r.slug, r))
+        return rows
+      },
+      async getParentChain(slug) {
+        const chain = []
+        let current = slug
+        while (current) {
+          const row = await this.get(current)
+          if (!row) break
+          chain.unshift(row)
+          current = row.parent_slug || null
+        }
+        return chain
+      },
+      async findReferrers(slug) {
+        const res = await fetch(`${base}?select=slug,title,content&limit=500`, { headers })
+        if (!res.ok) throw new Error(res.statusText)
+        const rows = await res.json()
+        rows.forEach(r => pagesCache.set(r.slug, { ...pagesCache.get(r.slug), ...r }))
+        const needle = '[[' + slug + ']]'
+        return rows.filter(p => (p.content || '').includes(needle))
+      },
+      async getReferencedSlugs() {
+        const res = await fetch(`${base}?select=content&limit=500`, { headers })
+        if (!res.ok) return new Set()
+        const rows = await res.json()
+        const set = new Set()
+        const re = /\[\[([^\]]+?)(?:\|[^\]]+)?\]\]/g
+        rows.forEach(p => {
+          let m
+          const content = p.content || ''
+          re.lastIndex = 0
+          while ((m = re.exec(content)) !== null) set.add(m[1].trim())
+        })
+        return set
+      }
+    }
+  })()
+
+  let referencedSlugsSet = new Set()
+
   function parseHash(hash) {
-    if (!hash || hash.length < 2) return { view: 'r', payload: hash ? hash.slice(1) : '' }
+    if (!hash || hash.length < 2) return { mode: 'wiki', view: 'r', payload: '', pageSlug: 'Home' }
+    if (hash.startsWith('#/')) {
+      const slug = decodeURIComponent(hash.slice(2).replace(/^\/+/, ''))
+      return { mode: 'wiki', view: 'r', payload: '', pageSlug: slug || 'Home' }
+    }
     const c = hash[1]
-    if (c === 'r' || c === 'e') return { view: c, payload: hash.slice(2) }
-    return { view: 'r', payload: hash.slice(1) }
+    if (c === 'r' || c === 'e') return { mode: 'legacy', view: c, payload: hash.slice(2) }
+    return { mode: 'wiki', view: 'r', payload: '', pageSlug: decodeURIComponent(hash.slice(1)) || 'Home' }
+  }
+
+  function slugFromHash(hash) {
+    const p = parseHash(hash)
+    return p.mode === 'wiki' ? (p.pageSlug || 'Home') : null
   }
 
   function setView(mode) {
@@ -407,6 +645,7 @@
     }
     const hash = await get()
     history.replaceState({}, '', hash)
+    await save()
     updateTitle()
   }
 
@@ -415,8 +654,8 @@
       if (location.hash !== '') {
         await set(location.hash)
       } else {
-        const stored = localStorage.getItem('hash') ?? ''
-        await set(stored || '#r')
+        const stored = localStorage.getItem('wiki_hash') ?? ''
+        await set(stored || '#/Home')
         const hash = await get()
         if (hash !== location.hash) history.replaceState({}, '', hash)
       }
@@ -424,6 +663,7 @@
       article.textContent = ''
       rawView.value = ''
       article.removeAttribute('style')
+      if (typeof notify === 'function') notify('Error: ' + e.message)
     }
     updateTitle()
   }
@@ -432,39 +672,177 @@
     const hash = await get()
     if (location.hash !== hash) history.replaceState({}, '', hash)
     try {
-      localStorage.setItem('hash', hash)
+      localStorage.setItem('wiki_hash', hash)
     } catch (e) {
+    }
+    const slug = slugFromHash(hash) || currentPageSlug
+    if (slug) {
+      const content = viewMode === 'r' ? getArticleMarkdown() : rawView.value
+      const match = content.match(/^\n*#\s*(.+)\n/)
+      await persistToBackend(slug, content, match?.[1] ?? slug)
     }
     updateTitle()
   }
 
   async function set(hash) {
     if (!hash) return
-    const { view, payload } = parseHash(hash)
-    let content = ''
-    let style = null
-    if (payload) {
-      const decoded = (await decompress(payload)).split('\x00')
-      content = decoded[0] ?? ''
-      style = decoded[1] ?? null
+    const parsed = parseHash(hash)
+    if (parsed.mode === 'wiki' && SUPABASE) {
+      const slug = parsed.pageSlug || 'Home'
+      currentPageSlug = slug
+      setView(parsed.view)
+      try {
+        referencedSlugsSet = await SUPABASE.getReferencedSlugs()
+        await SUPABASE.list()
+        const row = await SUPABASE.get(currentPageSlug)
+        const content = row?.content ?? ''
+        const title = row?.title ?? ''
+        editor.set(content)
+        rawView.value = content
+        article.removeAttribute('style')
+        if (row) pagesCache.set(row.slug, row)
+        const chain = await SUPABASE.getParentChain(slug)
+        navigationPath = chain.map(r => r.slug)
+      } catch (e) {
+        referencedSlugsSet = new Set()
+        editor.set('')
+        rawView.value = ''
+        navigationPath = [slug]
+        if (typeof notify === 'function') notify('Could not load page')
+      }
+      renderBreadcrumb()
+      renderReferencedBy()
+      return
     }
-    editor.set(content)
-    rawView.value = content
-    if (style) article.setAttribute('style', style)
-    else article.removeAttribute('style')
-    setView(view)
+    if (parsed.mode === 'legacy') {
+      let content = ''
+      let style = null
+      if (parsed.payload) {
+        try {
+          const decoded = (await decompress(parsed.payload)).split('\x00')
+          content = decoded[0] ?? ''
+          style = decoded[1] ?? null
+        } catch (_) {
+        }
+      }
+      editor.set(content)
+      rawView.value = content
+      if (style) article.setAttribute('style', style)
+      else article.removeAttribute('style')
+      setView(parsed.view)
+      currentPageSlug = null
+      navigationPath = []
+      renderBreadcrumb()
+      renderReferencedBy()
+      return
+    }
+    if (parsed.mode === 'wiki' && !SUPABASE) {
+      const slug = parsed.pageSlug || 'Home'
+      const stored = localStorage.getItem('wiki:' + slug) ?? ''
+      currentPageSlug = slug
+      const idx = navigationPath.indexOf(slug)
+      if (idx >= 0) navigationPath = navigationPath.slice(0, idx + 1)
+      else navigationPath = [slug]
+      editor.set(stored)
+      rawView.value = stored
+      article.removeAttribute('style')
+      setView(parsed.view)
+      renderBreadcrumb()
+      renderReferencedBy()
+      return
+    }
   }
 
   async function get() {
+    const slug = slugFromHash(location.hash)
+    if (slug) return '#/' + encodeURIComponent(slug)
     const style = article.getAttribute('style')
     const content = (viewMode === 'r' ? getArticleMarkdown() : rawView.value) + (style !== null ? '\x00' + style : '')
     return '#' + viewMode + await compress(content)
+  }
+
+  async function persistToBackend(slug, content, title, parent_slug) {
+    if (SUPABASE && slug) {
+      try {
+        const row = await SUPABASE.upsert(slug, title || slug, content, parent_slug)
+        if (row) pagesCache.set(row.slug, row)
+      } catch (e) {
+        if (typeof notify === 'function') notify('Could not save: ' + e.message)
+      }
+    } else if (slug) {
+      try {
+        localStorage.setItem('wiki:' + slug, content)
+      } catch (_) {}
+    }
   }
 
   function updateTitle() {
     const content = viewMode === 'r' ? getArticleMarkdown() : rawView.value
     const match = content.match(/^\n*#\s*(.+)\n/)
     document.title = match?.[1] ?? 'Textarea'
+  }
+
+  async function renderReferencedBy() {
+    const el = document.querySelector('#referenced-by')
+    if (!el) return
+    if (!SUPABASE || !currentPageSlug) {
+      el.classList.add('hidden')
+      el.innerHTML = ''
+      return
+    }
+    try {
+      const referrers = await SUPABASE.findReferrers(currentPageSlug)
+      if (!referrers.length) {
+        el.classList.add('hidden')
+        el.innerHTML = ''
+        return
+      }
+      el.classList.remove('hidden')
+      el.innerHTML = '<div class="label">Referenced by</div>'
+      referrers.forEach(p => {
+        const a = document.createElement('a')
+        a.href = '#/' + encodeURIComponent(p.slug)
+        a.textContent = p.title || p.slug
+        a.className = 'wiki-link md-url'
+        a.style.display = 'block'
+        a.style.marginBottom = '4px'
+        el.appendChild(a)
+      })
+    } catch (_) {
+      el.classList.add('hidden')
+      el.innerHTML = ''
+    }
+  }
+
+  function renderBreadcrumb() {
+    const el = document.querySelector('#breadcrumb')
+    if (!el) return
+    if (!navigationPath.length) {
+      el.classList.add('hidden')
+      el.innerHTML = ''
+      return
+    }
+    el.classList.remove('hidden')
+    el.innerHTML = ''
+    navigationPath.forEach((slug, i) => {
+      if (i > 0) {
+        const sep = document.createElement('span')
+        sep.className = 'sep'
+        sep.textContent = ' > '
+        el.appendChild(sep)
+      }
+      const page = pagesCache.get(slug)
+      const label = page?.title || slug
+      const a = document.createElement('a')
+      a.href = '#/' + encodeURIComponent(slug)
+      a.textContent = label
+      a.className = 'wiki-link md-url'
+      a.addEventListener('click', (e) => {
+        e.preventDefault()
+        location.hash = '#/' + encodeURIComponent(slug)
+      })
+      el.appendChild(a)
+    })
   }
 
   async function compress(string) {
@@ -599,6 +977,7 @@
     const matchers = [
       {name: 'md-codeblock', re: /```[^\n]*\n[\s\S]*?\n```/y},
       {name: 'md-codeblock', re: /~~~[^\n]*\n[\s\S]*?\n~~~/y},
+      {name: 'wiki-link', re: /\[\[([^\]]+?)(?:\|([^\]]+))?\]\]/y},
       {name: 'md-h1', re: /^#[ \t]+[^\n]*$/my},
       {name: 'md-h2', re: /^##[ \t]+[^\n]*$/my},
       {name: 'md-h3', re: /^###[ \t]+[^\n]*$/my},
@@ -626,7 +1005,33 @@
         const res = m.re.exec(input)
         if (res && res.index === i) {
           const raw = res[0]
-          if (m.name === 'md-img') {
+          if (m.name === 'wiki-link') {
+            const slug = res[1].trim()
+            const cached = pagesCache.get(slug)
+            const autoLabel = cached?.title || slug
+            const label = res[2]?.trim() || autoLabel
+            const a = document.createElement('a')
+            a.className = 'md-url wiki-link'
+            a.href = '#/' + encodeURIComponent(slug)
+            a.textContent = label
+            a.setAttribute('data-wiki-slug', slug)
+            frag.appendChild(a)
+
+            const isReferencedAnywhere = !!(referencedSlugsSet && referencedSlugsSet.has(slug))
+            const parentSlug = cached?.parent_slug || null
+            const isOnParent = parentSlug && parentSlug === currentPageSlug
+
+            if (isReferencedAnywhere && (!parentSlug || !isOnParent)) {
+              const sup = document.createElement('sup')
+              sup.className = 'ref-indicator'
+              sup.setAttribute('aria-label', 'referenced')
+              const span = document.createElement('span')
+              span.className = 'material-symbols-outlined'
+              span.textContent = 'arrow_insert'
+              sup.appendChild(span)
+              frag.appendChild(sup)
+            }
+          } else if (m.name === 'md-img') {
             const img = document.createElement('img')
             img.className = 'md-img'
             img.src = res[2]
@@ -652,6 +1057,26 @@
             const span = document.createElement('span')
             span.className = m.name
             span.textContent = raw.replace(/^#+[ \t]+/, '')
+            frag.appendChild(span)
+          } else if (m.name === 'md-bold') {
+            const span = document.createElement('span')
+            span.className = m.name
+            span.textContent = raw.slice(2, -2)
+            frag.appendChild(span)
+          } else if (m.name === 'md-strike') {
+            const span = document.createElement('span')
+            span.className = m.name
+            span.textContent = raw.slice(2, -2)
+            frag.appendChild(span)
+          } else if (m.name === 'md-italic') {
+            const span = document.createElement('span')
+            span.className = m.name
+            span.textContent = raw.slice(1, -1)
+            frag.appendChild(span)
+          } else if (m.name === 'md-code') {
+            const span = document.createElement('span')
+            span.className = m.name
+            span.textContent = raw.slice(1, -1)
             frag.appendChild(span)
           } else {
             const span = document.createElement('span')
@@ -692,6 +1117,7 @@
     if (node.nodeType === Node.TEXT_NODE) return node.nodeValue || ''
     if (node.nodeType !== Node.ELEMENT_NODE) return ''
     const el = node
+    if (el.tagName === 'SUP' && el.classList?.contains('ref-indicator')) return ''
     const inner = () => Array.from(el.childNodes).map(serializeToMarkdown).join('')
     if (el.classList?.contains('md-h1')) return '# ' + inner()
     if (el.classList?.contains('md-h2')) return '## ' + inner()
@@ -703,6 +1129,17 @@
       const alt = el.getAttribute('alt') || ''
       const src = el.getAttribute('src') || ''
       return '![' + alt + '](' + src + ')'
+    }
+    if (el.tagName === 'A' && el.classList?.contains('wiki-link')) {
+      let slug = el.getAttribute('data-wiki-slug')
+      if (!slug) {
+        try {
+          slug = decodeURIComponent((el.getAttribute('href') || '').replace(/^#\/?/, ''))
+        } catch (_) {
+          slug = inner()
+        }
+      }
+      return '[[' + slug + ']]'
     }
     if (el.tagName === 'A' && el.classList?.contains('md-url')) {
       const text = inner()
@@ -740,13 +1177,6 @@
       menu.classList.remove('visible')
     }
 
-    function notify(message) {
-      const notification = document.querySelector('#notification')
-      notification.classList.add('visible')
-      notification.textContent = message
-      setTimeout(() => notification.classList.remove('visible'), 2e3)
-    }
-
     document.body.addEventListener('click', event => {
       let t = event.target
       if (t.closest('#menu')) return
@@ -775,6 +1205,299 @@
       downloadTXT()
       hideMenu()
     })
+
+    const allPages = document.querySelector('#all-pages')
+    const pagesModal = document.querySelector('#pages-modal')
+    const pagesList = document.querySelector('#pages-list')
+    const pagesModalClose = document.querySelector('#pages-modal-close')
+
+    if (allPages) {
+      allPages.addEventListener('click', async (e) => {
+        e.preventDefault()
+        hideMenu()
+        pagesModal.style.display = 'flex'
+        try {
+          let pages = []
+          if (SUPABASE) {
+            pages = await SUPABASE.list()
+          } else {
+            for (let i = 0; i < localStorage.length; i++) {
+              const k = localStorage.key(i)
+              if (k?.startsWith('wiki:')) {
+                const slug = k.slice(5)
+                const row = { slug, title: slug }
+                pages.push(row)
+                pagesCache.set(slug, row)
+              }
+            }
+          }
+          pagesList.innerHTML = pages.length
+            ? pages.map(p => `<a href="#/${encodeURIComponent(p.slug)}" style="display:block;padding:8px 0;color:var(--link);">${escapeHtml(p.title || p.slug)}</a>`).join('')
+            : '<p style="color:var(--text);opacity:0.7;">No pages yet</p>'
+          pagesList.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => { pagesModal.style.display = 'none' })
+          })
+        } catch (err) {
+          pagesList.innerHTML = '<p style="color:red;">Could not load pages</p>'
+        }
+      })
+    }
+    if (pagesModalClose) {
+      pagesModalClose.addEventListener('click', () => { pagesModal.style.display = 'none' })
+    }
+    if (pagesModal) {
+      pagesModal.addEventListener('click', (e) => { if (e.target === pagesModal) pagesModal.style.display = 'none' })
+    }
+  }
+
+  function escapeHtml(s) {
+    const d = document.createElement('div')
+    d.textContent = s
+    return d.innerHTML
+  }
+
+  // --- Wiki-link autocomplete in raw view ---
+  let wikilinkStart = null
+  let wikilinkPopupEl = null
+  let wikilinkResults = []
+  let wikilinkSelected = 0
+  let wikilinkPagesLoaded = false
+
+  function ensureWikilinkPopup() {
+    if (wikilinkPopupEl) return wikilinkPopupEl
+    const el = document.createElement('div')
+    el.id = 'wikilink-popup'
+    el.className = 'noprint'
+    el.style.position = 'fixed'
+    el.style.minWidth = '260px'
+    el.style.maxWidth = '90vw'
+    el.style.maxHeight = '50vh'
+    el.style.overflow = 'auto'
+    el.style.background = 'var(--elevated)'
+    el.style.borderRadius = '8px'
+    el.style.boxShadow = '0 10px 30px rgba(0,0,0,0.3)'
+    el.style.font = '14px / 1.4 "Poppins", sans-serif'
+    el.style.display = 'none'
+    el.style.zIndex = '100'
+    document.body.appendChild(el)
+    wikilinkPopupEl = el
+    return el
+  }
+
+  function positionWikilinkPopup(x, y) {
+    const el = ensureWikilinkPopup()
+    const gap = 4
+    const maxRight = window.innerWidth - 16
+    const maxBottom = window.innerHeight - 16
+    let left = x
+    let top = y + gap
+    el.style.left = left + 'px'
+    el.style.top = top + 'px'
+    el.style.transform = 'none'
+    requestAnimationFrame(() => {
+      const r = el.getBoundingClientRect()
+      if (r.right > maxRight) left = maxRight - r.width
+      if (r.bottom > maxBottom) top = y - r.height - gap
+      if (top < 8) top = 8
+      if (left < 8) left = 8
+      el.style.left = left + 'px'
+      el.style.top = top + 'px'
+    })
+  }
+
+  async function loadAllPagesOnce() {
+    if (wikilinkPagesLoaded) return
+    try {
+      if (SUPABASE) {
+        await SUPABASE.list()
+      } else {
+        for (let i = 0; i < localStorage.length; i++) {
+          const k = localStorage.key(i)
+          if (k?.startsWith('wiki:')) {
+            const slug = k.slice(5)
+            const row = { slug, title: slug }
+            pagesCache.set(slug, row)
+          }
+        }
+      }
+      wikilinkPagesLoaded = true
+    } catch (_) {
+      // ignore
+    }
+  }
+
+  function genPageId() {
+    if (typeof crypto !== 'undefined' && crypto.randomUUID) {
+      return 'p' + crypto.randomUUID().replace(/-/g, '').slice(0, 12)
+    }
+    const s = () => Math.random().toString(36).slice(2)
+    return 'p' + s() + s().slice(0, 4) + Date.now().toString(36).slice(-4)
+  }
+
+  function getCaretCoordinates(textarea, offset) {
+    const div = document.createElement('div')
+    const style = getComputedStyle(textarea)
+    const rect = textarea.getBoundingClientRect()
+    div.style.cssText = `
+      position: fixed; visibility: hidden; white-space: pre-wrap; word-wrap: break-word;
+      overflow: hidden; top: ${rect.top}px; left: ${rect.left}px; width: ${textarea.offsetWidth}px; height: ${textarea.offsetHeight}px;
+      font: ${style.font}; padding: ${style.padding}; box-sizing: border-box;
+      line-height: ${style.lineHeight}; letter-spacing: ${style.letterSpacing};
+    `
+    document.body.appendChild(div)
+    const text = textarea.value.slice(0, offset)
+    div.textContent = text
+    const span = document.createElement('span')
+    span.textContent = '\u200b'
+    div.appendChild(span)
+    const spanRect = span.getBoundingClientRect()
+    document.body.removeChild(div)
+    return { x: spanRect.left, y: spanRect.bottom }
+  }
+
+  function handleRawKeydown(e) {
+    if (e.key === '[') {
+      const { selectionStart, selectionEnd, value } = rawView
+      if (selectionStart === selectionEnd && selectionStart >= 1 && value[selectionStart - 1] === '[') {
+        // user has just typed '[['
+        setTimeout(() => openWikilinkAt(selectionStart - 1), 0)
+      }
+    }
+    if (wikilinkStart !== null && wikilinkPopupEl && wikilinkPopupEl.style.display !== 'none') {
+      if (e.key === 'Escape') {
+        closeWikilinkPopup()
+      } else if (e.key === 'ArrowDown') {
+        e.preventDefault()
+        if (wikilinkResults.length) {
+          wikilinkSelected = (wikilinkSelected + 1) % wikilinkResults.length
+          renderWikilinkResults()
+        }
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault()
+        if (wikilinkResults.length) {
+          wikilinkSelected = (wikilinkSelected - 1 + wikilinkResults.length) % wikilinkResults.length
+          renderWikilinkResults()
+        }
+      } else if (e.key === 'Enter') {
+        if (wikilinkResults.length) {
+          e.preventDefault()
+          const choice = wikilinkResults[wikilinkSelected]
+          if (choice) applyWikilinkChoice(choice)
+        }
+      }
+    }
+  }
+
+  function handleRawInputForWikilink() {
+    if (wikilinkStart !== null) {
+      updateWikilinkQuery()
+    }
+  }
+
+  function openWikilinkAt(start) {
+    wikilinkStart = start
+    wikilinkSelected = 0
+    ensureWikilinkPopup()
+    try {
+      const { x, y } = getCaretCoordinates(rawView, start + 2)
+      positionWikilinkPopup(x, y)
+    } catch (_) {
+      positionWikilinkPopup(window.innerWidth / 2 - 130, window.innerHeight - 200)
+    }
+    wikilinkPopupEl.style.display = 'block'
+    updateWikilinkQuery()
+  }
+
+  async function updateWikilinkQuery() {
+    if (wikilinkStart === null) return
+    const caret = rawView.selectionStart
+    if (caret < wikilinkStart + 2) {
+      closeWikilinkPopup()
+      return
+    }
+    const segment = rawView.value.slice(wikilinkStart + 2, caret)
+    if (segment.includes(']') || segment.includes('\n')) {
+      closeWikilinkPopup()
+      return
+    }
+    const query = segment.trim()
+    await loadAllPagesOnce()
+    const all = Array.from(pagesCache.values())
+    const lower = query.toLowerCase()
+    let matches = all
+    if (lower) {
+      matches = all.filter(p =>
+        p.slug.toLowerCase().includes(lower) ||
+        (p.title || '').toLowerCase().includes(lower)
+      )
+    }
+    const choices = matches.map(p => ({
+      type: 'existing',
+      slug: p.slug,
+      title: p.title || p.slug
+    }))
+    if (query) {
+      choices.unshift({
+        type: 'new',
+        slug: null,
+        title: query
+      })
+    }
+    wikilinkResults = choices
+    wikilinkSelected = 0
+    try {
+      const { x, y } = getCaretCoordinates(rawView, rawView.selectionStart)
+      positionWikilinkPopup(x, y)
+    } catch (_) {}
+    renderWikilinkResults()
+  }
+
+  function renderWikilinkResults() {
+    const el = ensureWikilinkPopup()
+    if (!wikilinkResults.length) {
+      el.innerHTML = '<div style="padding:8px 12px;opacity:0.7;">No matches</div>'
+      return
+    }
+    el.innerHTML = wikilinkResults.map((c, idx) => {
+      const isActive = idx === wikilinkSelected
+      const prefix = c.type === 'new' ? 'Create ' : ''
+      return `<div data-idx="${idx}" style="padding:6px 12px;cursor:pointer;background:${isActive ? 'rgba(0,0,0,0.1)' : 'transparent'};">${escapeHtml(prefix + (c.title || c.slug))}</div>`
+    }).join('')
+    Array.from(el.querySelectorAll('div[data-idx]')).forEach(node => {
+      node.addEventListener('mousedown', e => {
+        e.preventDefault()
+        const idx = Number(node.getAttribute('data-idx'))
+        const choice = wikilinkResults[idx]
+        if (choice) applyWikilinkChoice(choice)
+      })
+    })
+  }
+
+  async function applyWikilinkChoice(choice) {
+    let { slug, title, type } = choice
+    if (type === 'new') {
+      slug = genPageId()
+      const t = title || ''
+      const initialContent = t ? '# ' + t + '\n\n' : ''
+      try {
+        await persistToBackend(slug, initialContent, t, currentPageSlug || undefined)
+      } catch (_) {}
+    }
+    const caret = rawView.selectionStart
+    const before = rawView.value.slice(0, wikilinkStart)
+    const after = rawView.value.slice(caret)
+    const insert = '[[' + slug + ']]'
+    rawView.value = before + insert + after
+    const newPos = before.length + insert.length
+    rawView.selectionStart = rawView.selectionEnd = newPos
+    closeWikilinkPopup()
+  }
+
+  function closeWikilinkPopup() {
+    if (wikilinkPopupEl) wikilinkPopupEl.style.display = 'none'
+    wikilinkStart = null
+    wikilinkResults = []
+    wikilinkSelected = 0
   }
 
   function ripple(event) {
